@@ -1,6 +1,6 @@
 /*
 Programa: holaMundo.c
-Descripcion: Programa quemuestra "Hello World"
+Descripcion: Programa que muestra "Hello World"
 */
 
 #include <stdio.h>
