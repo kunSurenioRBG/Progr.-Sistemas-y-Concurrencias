@@ -9,5 +9,7 @@ int main(void)
 {
     printf("Hello World \n");
     printf("Ana juega a los sims \n");
+    printf("Juan es una cabra \n");
+    
     return 0;
 }
