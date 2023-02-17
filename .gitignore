@@ -1,3 +1,4 @@
 .exe
 .vscode/
 */.exe
+.code-workspace
