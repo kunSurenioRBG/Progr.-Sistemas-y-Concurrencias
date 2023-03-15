@@ -2,7 +2,7 @@
  * Hotel.h
  *
  *  Created on: 6 abr. 2021
- *      Author: mmar
+ *      Author: Santiago Ponce Arrocha
  */
 #include "Planta.h"
 #ifndef HOTEL_H_

@@ -2,7 +2,7 @@
  * driverHotel.c
  *
  *  Created on: 9 abr. 2021
- *      Author: mmar
+ *      Author: Santiago Ponce Arrocha
  */
 #include "Planta.h"
 #include "Hotel.h"
@@ -15,32 +15,52 @@
  * Observa que en el fichero viene antes el nombre del cliente que el número
  * de habitación (al contrario que en la funcion nuevoClienteHotel)
  */
-void cargarHotel(char* nombre, ListaHab* hotel, unsigned nPlantas){
+void cargarHotel(char *nombre, ListaHab *hotel, unsigned nPlantas)
+{
+	FILE *file = fopen(nombre, "rt"); // read text
+	if (file == NULL)
+	{
+		perror("No se ha podido abrir el archivo correctamente");
+	}
 
+	char nombreCliente[30];
+	unsigned nh, fs;
+
+	/*
+	Lee del fichero stream los datos. Mientras por cada linea del .txt haya 3 parametros (nombreCliente, nh, fs), entonces
+	creara un nuevo cliente en el hotel.
+	Si falta algun parametro, descarta a ese cliente por falta de informacion
+	*/
+	while (fscanf(file, "%s %u %u", nombreCliente, nh, fs) == 3)
+	{
+		nuevoClienteHotel(hotel, nPlantas, nh, nombre, fs);
+	}
+
+	fclose(file);
 }
 
-
-int main1(){
+int main()
+{
 	ListaHab hotel[5];
-	crearHotel(hotel,5);
-	nuevoClienteHotel(hotel,5,13,"Paco Timo",25);
-	nuevoClienteHotel(hotel,5,24,"Rosa Moral",27);
-	nuevoClienteHotel(hotel,5,22,"Lorena Campos",26);
-	nuevoClienteHotel(hotel,5,32,"Marcos Navarro",26);
-	nuevoClienteHotel(hotel,5,4,"Carmen Valero",22);
-	nuevoClienteHotel(hotel,5,2,"Yolanda Cabo",23);
-	nuevoClienteHotel(hotel,5,44,"Fernando Vera",27);
-	nuevoClienteHotel(hotel,5,45,"Abel Justo",27);
-	imprimirHotel(hotel,5);
+	crearHotel(hotel, 5);
+	nuevoClienteHotel(hotel, 5, 13, "Paco Timo", 25);
+	nuevoClienteHotel(hotel, 5, 24, "Rosa Moral", 27);
+	nuevoClienteHotel(hotel, 5, 22, "Lorena Campos", 26);
+	nuevoClienteHotel(hotel, 5, 32, "Marcos Navarro", 26);
+	nuevoClienteHotel(hotel, 5, 4, "Carmen Valero", 22);
+	nuevoClienteHotel(hotel, 5, 2, "Yolanda Cabo", 23);
+	nuevoClienteHotel(hotel, 5, 44, "Fernando Vera", 27);
+	nuevoClienteHotel(hotel, 5, 45, "Abel Justo", 27);
+	imprimirHotel(hotel, 5);
 	printf("\n\nBorramos los que salen el 27\n\n");
-	borrarFechaSalidaHotel(hotel,5,27);
-	imprimirHotel(hotel,5);
+	borrarFechaSalidaHotel(hotel, 5, 27);
+	imprimirHotel(hotel, 5);
 	printf("\n\nAhora borramos el hotel\n\n");
-	borrarHotel(hotel,5);
-	imprimirHotel(hotel,5);
+	borrarHotel(hotel, 5);
+	imprimirHotel(hotel, 5);
 	printf("\n\nHotel borrado\n\n");
 	printf("\n\nAhora cargamos los datos del fichero DatosHotel.txt \n\n");
-	cargarHotel("DatosHotel.txt",hotel,5);
-	imprimirHotel(hotel,5);
+	cargarHotel("DatosHotel.txt", hotel, 5);
+	imprimirHotel(hotel, 5);
 	return 1;
 }
