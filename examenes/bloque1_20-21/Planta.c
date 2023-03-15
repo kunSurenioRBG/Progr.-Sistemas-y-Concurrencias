@@ -2,7 +2,7 @@
  * Planta.c
  *
  *  Created on: 9 abr. 2021
- *      Author:
+ *      Author: Santiago Ponce Arrocha
  */
 
 #include "Planta.h"
@@ -65,7 +65,7 @@ void nuevoCliente(ListaHab *lh, unsigned nh, char *nombre, unsigned fs)
         }
         else
         {
-            ant->sig = nuevoCliente;
+            ant->sig = clienteNuevo;
         }
     }
 }
@@ -80,7 +80,7 @@ void imprimir(ListaHab lh)
 {
     while (lh != NULL)
     {
-        printf("\t Habitacion %d ocupada por %s con fecha de salida %d", lh->numHab, lh->nombre, lh->fechaSalida);
+        printf("\t Habitacion %d ocupada por %s con fecha de salida %d \n", lh->numHab, lh->nombre, lh->fechaSalida);
         lh = lh->sig;
     }
 }
@@ -115,15 +115,19 @@ void borrarFechaSalida(ListaHab *lh, unsigned fs)
             if (ant == NULL)
             {
                 *lh = act->sig;
-                free(act);
-            }else
+            }
+            else
             {
                 ant->sig = act->sig;
             }
+            ListaHab delete = act;
+            act = act->sig;
+            free(delete);
         }
-        ant = act;
-        act = act->sig;
+        else
+        {
+            ant = act;
+            act = act->sig;
+        }
     }
-    
-    
 }

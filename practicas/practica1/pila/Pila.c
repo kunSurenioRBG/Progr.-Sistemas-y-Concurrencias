@@ -7,7 +7,7 @@ void crear(Pila *p){
 }
 
 void mostrar(Pila p){
-    // implementacion con una lista auxiliar
+    // implementacion con una pila auxiliar
     Pila aux = p;
     while (aux !=NULL)
     {
@@ -30,7 +30,7 @@ void insertar(Pila *p, int v){
     Pila nuevo = (Pila)malloc(sizeof(struct Nodo));
     if (nuevo == NULL)
     {
-        printf("Error insertas: memoria insuficiente");
+        printf("Error insertar: memoria insuficiente");
         return;
     }
     nuevo->valor = v;

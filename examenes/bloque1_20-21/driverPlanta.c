@@ -2,12 +2,13 @@
  * driverPlanta.c
  *
  *  Created on: 9 abr. 2021
- *      Author: mmar
+ *      Author: Santiago Ponce Arrocha
  */
 
 /*NOTA IMPORTANTIIIISIMA
 #include "Planta.h -> ES LO QUE SIEMPRE SE DEBE PONER
-pero los de vscode son especiales y el compilador falla si llamo el .h*/
+pero los de vscode son especiales y el compilador falla si llamo el .h
+Si eso, probar con .c (pero no debe ser asi, ojo)*/
 #include "Planta.h"
 #include <stdio.h>
 
@@ -23,7 +24,7 @@ int main(){
 	nuevoCliente(&lh,4,"Carmen Pasa",26);
 	nuevoCliente(&lh,7,"Felipe Moreno",26);
 	imprimir(lh);
-	printf("\n\nAhora borramos los que salen el día 26\n\n");
+	printf("\n\nAhora borramos los que salen el dia 26\n\n");
 	borrarFechaSalida(&lh,26);
 	imprimir(lh);
 	printf("\n\nAhora borramos toda la lista\n\n");

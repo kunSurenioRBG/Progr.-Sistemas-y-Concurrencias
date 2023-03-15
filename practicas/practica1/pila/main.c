@@ -1,4 +1,4 @@
-#include "Pila.c"
+#include "Pila.h"
 #include <stdio.h>
 
 int main(){
