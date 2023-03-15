@@ -1,2 +1,3 @@
 .vscode/
-
+examenes/**/*.exe
+practicas/**/*.exe
