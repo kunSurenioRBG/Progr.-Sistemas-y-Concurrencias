@@ -1,4 +1,3 @@
-package ejercicios_clase;
 
 public class Principal {
     public static void main(String[] args) {

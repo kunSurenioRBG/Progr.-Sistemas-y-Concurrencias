@@ -1,4 +1,4 @@
-package ejercicios_clase;
+
 public class Productor extends Thread {
     private Variable var;
 

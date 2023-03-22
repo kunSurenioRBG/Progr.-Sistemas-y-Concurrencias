@@ -1,4 +1,3 @@
-package ejercicios_clase;
 
 public class Variable {
     private int var;

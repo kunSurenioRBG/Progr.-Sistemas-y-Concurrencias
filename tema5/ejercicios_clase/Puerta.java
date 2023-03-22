@@ -1,4 +1,4 @@
-package ejercicios_clase;
+
 public class Puerta extends Thread {
     private Jardin jardin;
 
