@@ -40,8 +40,12 @@ public class principal_1_7 extends Thread {
         principal_1_7 h1 = new principal_1_7(0, 2);
         principal_1_7 h2 = new principal_1_7(2, 4);
 
+        // inicio los hilos
+        h1.start();
+        h2.start();
+
         // corrutina (try-catch) para evitar que el hilo principal del main no acabe
-        // hasta que acaben los hilos secundarios
+        // hasta que acaben los hilos secundarios.
         try {
             h1.join();
             h2.join();
