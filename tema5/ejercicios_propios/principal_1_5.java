@@ -36,8 +36,8 @@ public class principal_1_5 extends Thread {
             vec[i] = random.nextInt(10); // numero aleatorio entre 0 y (10, en nuestro caso)
         }
 
-        principal_1_5 h1 = new principal_1_5(0,4);
-        principal_1_5 h2 = new principal_1_5(4,8);
+        principal_1_5 h1 = new principal_1_5(0, 4);
+        principal_1_5 h2 = new principal_1_5(4, 8);
 
         h1.start();
         h2.start();
