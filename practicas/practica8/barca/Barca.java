@@ -1,4 +1,4 @@
-package barca;
+package practicas.practica8.barca;
 
 public class Barca extends Thread {
 	private static final int C = 4;

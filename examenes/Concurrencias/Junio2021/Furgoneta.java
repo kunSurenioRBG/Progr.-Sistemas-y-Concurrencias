@@ -1,3 +1,5 @@
+package examenes.Concurrencias.Junio2021;
+
 import java.util.Random;
 
 // Furgoneta con tecnologia V2X 

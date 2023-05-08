@@ -1,3 +1,5 @@
+package tema5.ejercicios_clase;
+
 
 public class Jardin {
     private int cont = 0; // numero de personas en el jardin

@@ -1,4 +1,4 @@
-package pajaritos;
+package practicas.practica6.pajaritos;
 
 import java.util.*;
 public class Papa extends Thread{

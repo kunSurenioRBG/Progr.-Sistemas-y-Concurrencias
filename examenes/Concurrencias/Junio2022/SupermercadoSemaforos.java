@@ -1,4 +1,4 @@
-package Junio2022;
+package examenes.Concurrencias.Junio2022;
 
 import java.util.concurrent.Semaphore;
 

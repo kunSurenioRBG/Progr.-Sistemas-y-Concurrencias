@@ -1,3 +1,5 @@
+package examenes.Concurrencias.Junio2019;
+
 import java.util.Random;
 
 public class Pasajero extends Thread {

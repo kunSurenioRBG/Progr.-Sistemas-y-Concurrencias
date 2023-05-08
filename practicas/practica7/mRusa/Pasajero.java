@@ -1,4 +1,4 @@
-package mRusa;
+package practicas.practica7.mRusa;
 import java.util.*;
 public class Pasajero extends Thread{
 	private static Random r = new Random();

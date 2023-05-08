@@ -1,3 +1,5 @@
+package examenes.Concurrencias.Septiembre2020;
+
 public class Alumno extends Thread{
 	private java.util.Random rnd = new java.util.Random();
 	private int id;

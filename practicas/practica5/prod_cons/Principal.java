@@ -1,3 +1,5 @@
+package practicas.practica5.prod_cons;
+
 
 // n = numero de elementos a leer
 // b = buffer

@@ -1,3 +1,5 @@
+package examenes.Concurrencias.Junio2020;
+
 import java.util.concurrent.Semaphore;
 
 public class Barca {

@@ -1,3 +1,5 @@
+package examenes.Concurrencias.Junio2019;
+
 import java.util.concurrent.Semaphore;
 
 public class Tiovivo {

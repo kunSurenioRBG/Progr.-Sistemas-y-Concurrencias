@@ -1,4 +1,4 @@
-package agua;
+package practicas.practica8.agua;
 
 import java.util.Random;
 

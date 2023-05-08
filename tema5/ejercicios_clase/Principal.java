@@ -1,3 +1,5 @@
+package tema5.ejercicios_clase;
+
 
 public class Principal {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package barca;
+package practicas.practica8.barca;
 
 public class Principal {
 

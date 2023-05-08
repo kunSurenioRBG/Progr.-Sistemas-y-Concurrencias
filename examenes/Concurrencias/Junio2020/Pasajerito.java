@@ -1,3 +1,5 @@
+package examenes.Concurrencias.Junio2020;
+
 import java.util.*;
 public class Pasajerito extends Thread{
 	private int id;

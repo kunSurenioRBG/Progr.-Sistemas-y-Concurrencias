@@ -1,3 +1,5 @@
+package tema5.ejercicios_clase;
+
 public class Consumidor extends Thread {
     private Variable var;
 

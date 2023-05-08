@@ -1,4 +1,4 @@
-package aseos;
+package practicas.practica8.aseos;
 
 public class Principal {
 

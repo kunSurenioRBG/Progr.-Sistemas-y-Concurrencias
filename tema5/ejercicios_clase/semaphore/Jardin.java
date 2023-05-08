@@ -1,4 +1,4 @@
-package semaphore;
+package tema5.ejercicios_clase.semaphore;
 
 import java.util.concurrent.Semaphore;
 

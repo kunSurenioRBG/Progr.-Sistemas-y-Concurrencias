@@ -1,4 +1,4 @@
-package pajaritos;
+package practicas.practica6.pajaritos;
 
 public class Principal {
 

@@ -1,4 +1,4 @@
-package semaphore;
+package tema5.ejercicios_clase.semaphore;
 
 public class Principal{
     public static void main(String[] args) {

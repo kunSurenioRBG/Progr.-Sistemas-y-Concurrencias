@@ -1,3 +1,5 @@
+package examenes.Concurrencias.Junio2019;
+
 
 public class Operario extends Thread {
 

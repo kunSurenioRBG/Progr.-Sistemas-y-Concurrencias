@@ -1,4 +1,4 @@
-package Aseos;
+package practicas.practica7.Aseos;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package sensores;
+package practicas.practica6.sensores;
 
 import java.util.concurrent.*;
 

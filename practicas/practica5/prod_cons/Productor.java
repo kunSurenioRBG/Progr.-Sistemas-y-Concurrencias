@@ -1,3 +1,5 @@
+package practicas.practica5.prod_cons;
+
 
 
 public class Productor extends Thread {
