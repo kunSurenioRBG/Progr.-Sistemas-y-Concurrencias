@@ -1,4 +1,4 @@
-package prodcons;
+package tema6.codigos_clase.prodcons;
 
 import java.util.concurrent.*;
 
