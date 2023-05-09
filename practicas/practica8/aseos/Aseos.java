@@ -21,7 +21,7 @@ public class Aseos {
 	 */
 	public synchronized void entroAseo(int id) throws InterruptedException {
 		// si estan limpiando, el cliente se espera (bloquea)
-		if (limpiando || quieroLimpiar) {
+		while (limpiando || quieroLimpiar) {
 			wait();
 		}
 		clientesDentro++;
