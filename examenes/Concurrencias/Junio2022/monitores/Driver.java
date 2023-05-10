@@ -7,8 +7,8 @@ public class Driver {
 	public static void main(String[] args) throws InterruptedException {
 		final int NC = 15;
 		Random r= new Random();
-		Supermercado mkt = new SupermercadoSemaforos(); //Comenta esta linea para probar la version con monitores
-		//Supermercado mkt = new SupermercadoMonitores(); //Descomenta esta linea para probar la version con monitores
+		//Supermercado mkt = new SupermercadoSemaforos(); //Comenta esta linea para probar la version con monitores
+		Supermercado mkt = new SupermercadoMonitores(); //Descomenta esta linea para probar la version con monitores
 		Cliente[] c1 = new Cliente[NC];
 		for (int i=0; i<c1.length; i++) {
 			c1[i] = new Cliente (mkt,i);
