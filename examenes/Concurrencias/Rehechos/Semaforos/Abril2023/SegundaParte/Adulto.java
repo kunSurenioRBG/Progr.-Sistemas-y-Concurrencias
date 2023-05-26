@@ -1,4 +1,4 @@
-package paseo_2v;
+package examenes.Concurrencias.Rehechos.Semaforos.Abril2023.SegundaParte;
 
 import java.util.*;
 public class Adulto extends Thread{
