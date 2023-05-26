@@ -1,4 +1,4 @@
-package paseo_1v;
+package examenes.Concurrencias.Rehechos.Semaforos.Abril2023.PrimeraParte;
 
 import java.util.Random;
 
