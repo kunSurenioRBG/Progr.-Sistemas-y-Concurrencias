@@ -1,4 +1,4 @@
-package examenes.Concurrencias.Rehechos.Semaforos.Junio2022;
+package examenes.Concurrencias.Rehechos.Monitores.Junio2022;
 
 import java.util.Random;
 import java.util.concurrent.atomic.*;
