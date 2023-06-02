@@ -4,7 +4,7 @@ import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.*;
-public class Panel1 extends JPanel{
+public class Panel extends JPanel{
 
 	/**
 	 * 
@@ -32,7 +32,7 @@ public class Panel1 extends JPanel{
 	private JLabel messageAreaBubble = new JLabel("");
 	private JLabel comment = new JLabel("GUI created");
 	
-	public Panel1(){
+	public Panel(){
 		this.setLayout(new BorderLayout());
 		comment.setForeground(Color.RED);
 		setCreateButton();
