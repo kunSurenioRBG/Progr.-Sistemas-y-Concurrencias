@@ -1,4 +1,4 @@
-package practicas.practiaGUI.gui_publish;
+package practicas.practicaGUI.gui_publish;
 
 import javax.swing.*;
 
