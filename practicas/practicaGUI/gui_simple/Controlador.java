@@ -1,4 +1,4 @@
-package practicas.practiaGUI.gui_simple;
+package practicas.practicaGUI.gui_simple;
 
 import java.awt.event.*;
 
