@@ -1,7 +1,6 @@
 package practicas.practicaGUI.gui_publish;
 
 import java.util.*;
-import java.util.concurrent.ExecutionException;
 
 import javax.swing.SwingWorker;
 
