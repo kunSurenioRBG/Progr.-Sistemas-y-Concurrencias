@@ -44,12 +44,8 @@ public class Controlador implements ActionListener,PropertyChangeListener{
 			if (w!=null) {
 				w.cancel(true);
 			}
-		}
-			
-		
+		}	
 	}
-
-
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
 		// TODO Auto-generated method stub
