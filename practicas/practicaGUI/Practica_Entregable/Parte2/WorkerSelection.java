@@ -8,12 +8,14 @@ import javax.swing.SwingWorker;
 
 public class WorkerSelection extends SwingWorker<Void, List<Integer>> {
     private Panel panel;
+    private int n;
     private List<Integer> lista;
     private List<Integer> listaSelection;
 
-    public WorkerSelection(List<Integer> lista, Panel panel) {
+    public WorkerSelection(List<Integer> lista, int n, Panel panel) {
         this.lista = new ArrayList<>(lista);
         listaSelection = ordenarSelection();
+        this.n = n;
         this.panel = panel;
     }
 

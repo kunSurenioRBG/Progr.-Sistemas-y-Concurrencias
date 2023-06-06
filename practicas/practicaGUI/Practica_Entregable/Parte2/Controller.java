@@ -48,14 +48,13 @@ public class Controller implements ActionListener, PropertyChangeListener {
         } else if (e.getActionCommand().equals("BOTONO")) {
             // pasamos la lista a los "workers" para que las ordenen, con sus respectivos
             // algoritmos
-            panel.enableCancelButton();
             panel.initIndexes();
             panel.messageAreaSelection("Sorting the list");
             panel.messageAreaBubble("Sorting the list");
 
             // tiempo de WorkerSelection
             long startTime1 = System.currentTimeMillis();
-            wS = new WorkerSelection(lista, panel);
+            wS = new WorkerSelection(lista, n, panel);
             wS.addPropertyChangeListener(this);
             wS.execute();
             panel.writeTextAreaSelection(wS.getLista());
@@ -64,23 +63,12 @@ public class Controller implements ActionListener, PropertyChangeListener {
 
             // tiempo de WorkerBubble
             long startTime2 = System.currentTimeMillis();
-            wB = new WorkerBubble(lista, panel);
+            wB = new WorkerBubble(lista, n, panel);
             wB.addPropertyChangeListener(this);
             wB.execute();
             panel.writeTextAreaBubble(wB.getLista());
             long total2 = (System.currentTimeMillis() - startTime2);
             panel.messageAreaBubble("List sorted in " + total2 + " ms.");
-
-            panel.enableCreateButton();
-            panel.disableSortButton();
-            panel.disableCancelButton();
-        } else if (e.getActionCommand().equals("BOTONC")) {
-            if (wS != null && wB != null) {
-                wS.cancel(true);
-                panel.messageAreaSelection("Sort cancelled");
-                wB.cancel(true);
-                panel.messageAreaBubble("Sort cancelled");
-            }
         }
     }
 

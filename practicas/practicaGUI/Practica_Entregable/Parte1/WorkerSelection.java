@@ -4,17 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import javax.swing.SwingWorker;
-
-public class WorkerSelection extends SwingWorker<Void, List<Integer>> {
-    private Panel panel;
+public class WorkerSelection {
     private List<Integer> lista;
     private List<Integer> listaSelection;
 
-    public WorkerSelection(List<Integer> lista, Panel panel) {
+    public WorkerSelection(List<Integer> lista) {
         this.lista = new ArrayList<>(lista);
         listaSelection = ordenarSelection();
-        this.panel = panel;
     }
 
     private List<Integer> ordenarSelection() {
@@ -29,32 +25,15 @@ public class WorkerSelection extends SwingWorker<Void, List<Integer>> {
                     menor = j;
                 }
             }
-            firePropertyChange("progressSelection", null, i * 100 / listaSolucion.size());
-            publish(listaSolucion.subList(0, i));
             Collections.swap(listaSolucion, i, menor);
 
             // Inv: a[0..i] tiene los i+1 menores elementos de a[0..N-1]
             // Inv: a[0..i] está ordenado
         }
-        firePropertyChange("progressSelection", null, 100);
-        publish(listaSolucion);
         return listaSolucion;
     }
 
     public List<Integer> getLista() {
         return listaSelection;
-    }
-
-    @Override
-    protected Void doInBackground() throws Exception {
-        ordenarSelection();
-
-        return null;
-    }
-
-    @Override
-    public void process(List<List<Integer>> lista) {
-        panel.clearAreaSelection();
-        panel.writeTextAreaSelection(lista.get(lista.size() - 1));
     }
 }

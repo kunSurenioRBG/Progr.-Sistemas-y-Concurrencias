@@ -8,12 +8,14 @@ import javax.swing.SwingWorker;
 
 public class WorkerBubble extends SwingWorker<Void, List<Integer>> {
     private Panel panel;
+    private int n;
     private List<Integer> lista;
     private List<Integer> listaBubble;
 
-    public WorkerBubble(List<Integer> lista, Panel panel) {
+    public WorkerBubble(List<Integer> lista, int n, Panel panel) {
         this.lista = new ArrayList<>(lista);
         listaBubble = ordenarBubble();
+        this.n = n;
         this.panel = panel;
     }
 

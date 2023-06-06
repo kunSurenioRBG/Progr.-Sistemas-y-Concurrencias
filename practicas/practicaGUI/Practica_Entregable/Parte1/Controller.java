@@ -2,13 +2,11 @@ package practicas.practicaGUI.Practica_Entregable;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Controller implements ActionListener, PropertyChangeListener {
+public class Controller implements ActionListener {
     private Panel panel;
     private WorkerSelection wS = null;
     private WorkerBubble wB = null;
@@ -42,55 +40,29 @@ public class Controller implements ActionListener, PropertyChangeListener {
                 panel.messageArea("List Created");
                 panel.comment("Number correct");
                 panel.enableSortButton();
-                panel.disableCreateButton();
+                // panel.disableCreateButton();
             }
 
         } else if (e.getActionCommand().equals("BOTONO")) {
             // pasamos la lista a los "workers" para que las ordenen, con sus respectivos
             // algoritmos
-            panel.enableCancelButton();
             panel.initIndexes();
             panel.messageAreaSelection("Sorting the list");
             panel.messageAreaBubble("Sorting the list");
 
             // tiempo de WorkerSelection
             long startTime1 = System.currentTimeMillis();
-            wS = new WorkerSelection(lista, panel);
-            wS.addPropertyChangeListener(this);
-            wS.execute();
+            wS = new WorkerSelection(lista);
             panel.writeTextAreaSelection(wS.getLista());
             long total1 = (System.currentTimeMillis() - startTime1);
             panel.messageAreaSelection("List sorted in " + total1 + " ms.");
 
             // tiempo de WorkerBubble
             long startTime2 = System.currentTimeMillis();
-            wB = new WorkerBubble(lista, panel);
-            wB.addPropertyChangeListener(this);
-            wB.execute();
+            wB = new WorkerBubble(lista);
             panel.writeTextAreaBubble(wB.getLista());
             long total2 = (System.currentTimeMillis() - startTime2);
             panel.messageAreaBubble("List sorted in " + total2 + " ms.");
-
-            panel.enableCreateButton();
-            panel.disableSortButton();
-            panel.disableCancelButton();
-        } else if (e.getActionCommand().equals("BOTONC")) {
-            if (wS != null && wB != null) {
-                wS.cancel(true);
-                panel.messageAreaSelection("Sort cancelled");
-                wB.cancel(true);
-                panel.messageAreaBubble("Sort cancelled");
-            }
-        }
-    }
-
-    @Override
-    public void propertyChange(PropertyChangeEvent evt) {
-        if (evt.getPropertyName().equals("progressSelection")) {
-            panel.cambiaProgresoSelection((Integer) (evt.getNewValue()));
-
-        } else if (evt.getPropertyName().equals("progressBubble")) {
-            panel.cambiaProgresoBubble((Integer) (evt.getNewValue()));
         }
     }
 }
